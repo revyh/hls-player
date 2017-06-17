@@ -1,0 +1,9 @@
+{
+  "name": "hls-player",
+  "version": "0.0.1",
+  "description": "hls video player",
+  "main": "index.js",
+  "author": "revyh <revyh@mail.ru>",
+  "license": "MIT",
+  "repository": "git@github.com:revyh/hls-player.git"
+}
