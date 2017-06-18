@@ -4,6 +4,7 @@ const {resolve} = require('path');
 const base = require('./toolsUtils/build/base');
 const js = require('./toolsUtils/build/js');
 const css = require('./toolsUtils/build/css');
+const icons = require('./toolsUtils/build/icons');
 const misc = require('./toolsUtils/build/misc');
 const devServer = require('./toolsUtils/build/devServer');
 
@@ -11,6 +12,7 @@ const configTransforms = [
   base,
   js,
   css,
+  icons,
   misc,
   devServer,
 ];
