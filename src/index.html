@@ -1,0 +1,40 @@
+<% require('misc/robots.txt') %>
+<% require('misc/favicon.ico') %>
+<% var files = htmlWebpackPlugin.files %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>HLS player</title>
+  <meta name="description" content="HLS player">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;subset=cyrillic" rel="stylesheet">
+  <style>
+    <%= require('styles.scss') %>
+  </style>
+
+  <link href="<%= require('misc/apple-touch-icon.png') %>" rel="apple-touch-icon">
+
+  <% for (var css in files.css) { %>
+    <link href="<%= files.css[css] %>" rel="stylesheet">
+  <% } %>
+
+  <% for (var js in files.js) { %>
+    <script src="<%= files.js[js] %>" async></script>
+  <% } %>
+
+</head>
+<body>
+  <div id="react-root">
+    <div class="page-load">
+      <span class="page-load_content">
+        Page loading
+        <span class="page-load_dot page-load_dot__1">.</span>
+        <span class="page-load_dot page-load_dot__2">.</span>
+        <span class="page-load_dot page-load_dot__3">.</span>
+      </span>
+    </div>
+  </div>
+</body>
+</html>
