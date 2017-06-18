@@ -1,0 +1,3 @@
+---
+  extends: ./toolsUtils/stylelint/base.yml
+  ignoreFiles: ./dist/**/*

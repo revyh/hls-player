@@ -1,0 +1,271 @@
+---
+  severity:
+    - &warning {severity: warning}
+    - &error {severity: error}
+
+  rules:
+    # Color
+    color-hex-case: [lower, *warning]
+    color-hex-length: [short, *warning]
+    color-named: [never, *warning]
+    color-no-hex: null
+    color-no-invalid-hex: [true, *error]
+
+    # Font family
+    font-family-name-quotes: [always-where-recommended, *error]
+    font-family-no-duplicate-names: [true, *error]
+
+    # Font weight
+    font-weight-notation: [named-where-possible, *warning]
+
+    # Function
+    function-blacklist: null
+    function-calc-no-unspaced-operator: [true, *warning]
+    function-comma-newline-after: [always-multi-line, *warning]
+    function-comma-newline-before: null
+    function-comma-space-after: [always-single-line, *warning]
+    function-comma-space-before: [never, *warning]
+    function-linear-gradient-no-nonstandard-direction: [true, *error]
+    function-max-empty-lines: [0, *warning]
+    function-name-case: [lower, *warning]
+    function-parentheses-newline-inside: [always-multi-line, *warning]
+    function-parentheses-space-inside: [never-single-line, *warning]
+    function-url-data-uris: null
+    function-url-no-scheme-relative: [true, *error]
+    function-url-quotes:
+      - always
+      -
+        except: empty
+        severity: error
+    function-url-scheme-whitelist: [[http, https, data], *error]
+    function-whitelist: null
+    function-whitespace-after: [always, *warning]
+
+    # Number
+    number-leading-zero: [always, *warning]
+    number-max-precision: [4, *warning]
+    number-no-trailing-zeros: [true, *warning]
+
+    # String
+    string-no-newline: [true, *error]
+    string-quotes: [single, *warning]
+
+    # Length
+    length-zero-no-unit: [true, *warning]
+
+    # Time
+    time-min-milliseconds: [100, *warning]
+
+    # Unit
+    unit-blacklist: null
+    unit-case: [lower, *warning]
+    unit-no-unknown: [true, *error]
+    unit-whitelist: null
+
+    # Value
+    value-keyword-case: [lower, *warning]
+    value-no-vendor-prefix: [true, *error]
+
+    # Value list
+    value-list-comma-newline-after: [always-multi-line, *warning]
+    value-list-comma-newline-before: null
+    value-list-comma-space-after: [always-single-line, *warning]
+    value-list-comma-space-before: [never, *warning]
+    value-list-max-empty-lines: [0, *warning]
+
+    # Custom property
+    custom-property-empty-line-before:
+      - always
+      -
+        severity: warning
+        except: [after-comment, after-custom-property, first-nested]
+    custom-property-pattern: null
+
+    # Shorthand property
+    shorthand-property-no-redundant-values: [true, *warning]
+
+    # Property
+    property-blacklist: null
+    property-case: [lower, *warning]
+    property-no-unknown:
+      - true
+      -
+        severity: error
+        ignoreProperties: [composes]
+    property-no-vendor-prefix: [true, *error]
+    property-whitelist: null
+
+    # Keyframe declaration
+    keyframe-declaration-no-important: [true, *warning]
+
+    # Declaration
+    declaration-bang-space-after: [never, *warning]
+    declaration-bang-space-before: [always, *warning]
+    declaration-colon-newline-after: [always-multi-line, *warning]
+    declaration-colon-space-after: [always-single-line, *warning]
+    declaration-colon-space-before: [never, *warning]
+    declaration-empty-line-before:
+      - always
+      -
+        severity: warning
+        except: [after-declaration, first-nested]
+        ignore: [after-comment, inside-single-line-block]
+    declaration-no-important: [true, *error]
+    declaration-property-unit-blacklist: null
+    declaration-property-unit-whitelist: null
+    declaration-property-value-blacklist: null
+    declaration-property-value-whitelist: null
+
+    # Declaration block
+    declaration-block-no-duplicate-properties:
+      - true
+      -
+        severity: error
+        ignore: [consecutive-duplicates-with-different-values]
+    declaration-block-no-redundant-longhand-properties: [true, *warning]
+    declaration-block-no-shorthand-property-overrides: [true, *error]
+    declaration-block-semicolon-newline-after: [always-multi-line, *warning]
+    declaration-block-semicolon-newline-before: null
+    declaration-block-semicolon-space-after: [always-single-line, *warning]
+    declaration-block-semicolon-space-before: [never, *warning]
+    declaration-block-single-line-max-declarations: [1, *warning]
+    declaration-block-trailing-semicolon: [always, *error]
+
+    # Block
+    block-closing-brace-newline-after: [always, *warning]
+    block-closing-brace-newline-before: [always-multi-line, *warning]
+    block-closing-brace-space-after: null
+    block-closing-brace-space-before: [always-single-line, *warning]
+    block-no-empty: [true, *error]
+    block-opening-brace-newline-after: [always-multi-line, *warning]
+    block-opening-brace-newline-before: null
+    block-opening-brace-space-after: [always-single-line, *warning]
+    block-opening-brace-space-before: [always, *warning]
+
+    # Selector
+    selector-attribute-brackets-space-inside: [never, *warning]
+    selector-attribute-operator-blacklist: null
+    selector-attribute-operator-space-after: [never, *warning]
+    selector-attribute-operator-space-before: [never, *warning]
+    selector-attribute-operator-whitelist: null
+    selector-attribute-quotes: [always, *error]
+    selector-class-pattern: null
+    selector-combinator-space-after: [always, *warning]
+    selector-combinator-space-before: [always, *warning]
+    selector-descendant-combinator-no-non-space: [true, *error]
+    selector-id-pattern: null
+    selector-max-class: null
+    selector-max-compound-selectors: [3, *warning]
+    selector-max-specificity: ['0,5,1', *warning]
+    selector-nested-pattern: null
+    selector-no-attribute: null
+    selector-no-combinator: null
+    selector-no-id: [true, *error]
+    selector-no-qualifying-type:
+      - true
+      -
+        severity: error
+        ignore: [attribute]
+    selector-no-type: [true, *error]
+    selector-no-universal: [true, *error]
+    selector-no-vendor-prefix: [true, *error]
+    selector-pseudo-class-blacklist: null
+    selector-pseudo-class-case: [lower, *warning]
+    selector-pseudo-class-no-unknown:
+      - true
+      -
+        severity: error
+        ignorePseudoClasses: [global, local]
+    selector-pseudo-class-parentheses-space-inside: [never, *warning]
+    selector-pseudo-class-whitelist: null
+    selector-pseudo-element-case: [lower, *warning]
+    selector-pseudo-element-colon-notation: [double, *error]
+    selector-pseudo-element-no-unknown: [true, *error]
+    selector-type-case: [lower, *warning]
+    selector-type-no-unknown: [true, *error]
+    selector-max-empty-lines: [0, *warning]
+
+    # Selector list
+    selector-list-comma-newline-after: [always-multi-line, *warning]
+    selector-list-comma-newline-before: null
+    selector-list-comma-space-after: [always-single-line, *warning]
+    selector-list-comma-space-before: [never, *warning]
+
+    # Rule
+    rule-empty-line-before:
+      - always-multi-line
+      -
+        severity: warning
+        except: [first-nested]
+        ignore: [after-comment]
+
+    # Media feature
+    media-feature-colon-space-after: [always, *warning]
+    media-feature-colon-space-before: [never, *warning]
+    media-feature-name-blacklist: null
+    media-feature-name-case: [lower, *warning]
+    media-feature-name-no-unknown: [true, *error]
+    media-feature-name-no-vendor-prefix: [true, *error]
+    media-feature-name-whitelist: null
+    media-feature-parentheses-space-inside: [never, *warning]
+    media-feature-range-operator-space-after: [always, *warning]
+    media-feature-range-operator-space-before: [always, *warning]
+
+    # Custom media
+    custom-media-pattern: null
+
+    # Media query list
+    media-query-list-comma-newline-after: [always-multi-line, *warning]
+    media-query-list-comma-newline-before: null
+    media-query-list-comma-space-after: [always-single-line, *warning]
+    media-query-list-comma-space-before: [never, *warning]
+
+    # At rule
+    at-rule-blacklist: null
+    at-rule-empty-line-before:
+      - always
+      -
+        severity: warning
+        except: [blockless-after-same-name-blockless, first-nested]
+        ignore: [after-comment]
+    at-rule-name-case: [lower, *warning]
+    at-rule-name-newline-after: null
+    at-rule-name-space-after: [always, *warning]
+    at-rule-no-unknown:
+      - true
+      -
+        severity: warning
+        ignoreAtRules: [define-mixin, mixin, util, include]
+    at-rule-no-vendor-prefix: [true, *error]
+    at-rule-semicolon-space-before: [never, *warning]
+    at-rule-semicolon-newline-after: [always, *warning]
+    at-rule-whitelist: null
+
+    # Comment
+    comment-empty-line-before:
+      - always
+      -
+        severity: warning
+        except: [first-nested]
+        ignore: [after-comment, stylelint-commands]
+    comment-no-empty: [true, *warning]
+    comment-whitespace-inside: [always, *warning]
+    comment-word-blacklist: null
+
+    # General / Sheet
+    indentation: [2, *warning]
+    max-empty-lines:
+      - 2
+      -
+        severity: warning
+        ignore: [comments]
+    max-line-length: null
+    max-nesting-depth: [3, *warning]
+    no-descending-specificity: [true, *warning]
+    no-duplicate-selectors: [true, *error]
+    no-empty-source: [true, *warning]
+    no-eol-whitespace: [true, *warning]
+    no-extra-semicolons: [true, *error]
+    no-invalid-double-slash-comments: [true, *error]
+    no-missing-end-of-source-newline: [true, *warning]
+    no-unknown-animations: [true, *error]
