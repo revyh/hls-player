@@ -1,0 +1,77 @@
+@import 'settings.scss';
+
+$panel-height: 27px;
+
+@mixin btn-elem {
+  height: $panel-height;
+  padding: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  fill: currentColor;
+}
+
+.base {
+  display: flex;
+}
+
+.play-btn-elem {
+  @include btn-elem;
+
+  width: 23px;
+  margin-right: 40px;
+}
+
+.mute-btn-elem {
+  @include btn-elem;
+
+  width: 27px;
+  margin-right: 10px;
+}
+
+.mute-btn-elem__active {
+  composes: mute-btn-elem;
+  padding: 0;
+  transform: translateX(2px);
+}
+
+.volume-elem {
+  display: flex;
+  height: $panel-height;
+  width: 60px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.volume-hidden-elem {
+  display: none;
+}
+
+.volume-track-elem {
+  display: block;
+  height: 5px;
+  background-color: rgba($base-font-color, 0.5);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.volume-active-track-elem {
+  display: block;
+  height: 100%;
+  background-color: $base-font-color;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+.time-elem {
+  margin-left: auto;
+  margin-right: 40px;
+  font-size: 24px;
+  line-height: $panel-height;
+  visibility: middle;
+}
+
+.fullscreen-btn-elem {
+  @include btn-elem;
+
+  width: 26px;
+}

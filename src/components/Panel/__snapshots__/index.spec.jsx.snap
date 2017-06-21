@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render with custom values 1`] = `
+<div
+  className="base"
+>
+  <Icon
+    className="playBtnElem"
+    onClick={[Function]}
+    symbol="play"
+  />
+  <Icon
+    className="muteBtnElemActive"
+    onClick={[Function]}
+    symbol="mute"
+  />
+  <InputRange
+    classNames={
+      Object {
+        "activeTrack": "volumeActiveTrackElem",
+        "inputRange": "volumeElem",
+        "labelContainer": "volumeHiddenElem",
+        "maxLabel": "volumeHiddenElem",
+        "minLabel": "volumeHiddenElem",
+        "slider": "volumeHiddenElem",
+        "sliderContainer": "volumeHiddenElem",
+        "track": "volumeTrackElem",
+        "valueLabel": "volumeHiddenElem",
+      }
+    }
+    disabled={false}
+    maxValue={100}
+    minValue={0}
+    onChange={[Function]}
+    step={1}
+    value={10}
+  />
+  <span
+    className="timeElem"
+  >
+    01:01:01
+  </span>
+  <Icon
+    className="fullscreenBtnElem"
+    onClick={[Function]}
+    symbol="leaveFullscreen"
+  />
+</div>
+`;
+
+exports[`should render with default values 1`] = `
+<div
+  className="base"
+>
+  <Icon
+    className="playBtnElem"
+    onClick={[Function]}
+    symbol="pause"
+  />
+  <Icon
+    className="muteBtnElem"
+    onClick={[Function]}
+    symbol="sound"
+  />
+  <InputRange
+    classNames={
+      Object {
+        "activeTrack": "volumeActiveTrackElem",
+        "inputRange": "volumeElem",
+        "labelContainer": "volumeHiddenElem",
+        "maxLabel": "volumeHiddenElem",
+        "minLabel": "volumeHiddenElem",
+        "slider": "volumeHiddenElem",
+        "sliderContainer": "volumeHiddenElem",
+        "track": "volumeTrackElem",
+        "valueLabel": "volumeHiddenElem",
+      }
+    }
+    disabled={false}
+    maxValue={100}
+    minValue={0}
+    onChange={[Function]}
+    step={1}
+    value={50}
+  />
+  <span
+    className="timeElem"
+  >
+    00:00
+  </span>
+  <Icon
+    className="fullscreenBtnElem"
+    onClick={[Function]}
+    symbol="enterFullscreen"
+  />
+</div>
+`;
