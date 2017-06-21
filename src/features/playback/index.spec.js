@@ -1,5 +1,6 @@
 import deepFreeze from 'deep-freeze';
 import {actions, reducer, selectors, actionTypes} from '.';
+import {actionTypes as mediaActionTypes} from 'features/media';
 
 function createState({
   isPaused = false,
@@ -137,6 +138,27 @@ describe('reducer', () => {
     expect(reducer(state, action)).toEqual({
       ...createState(),
       isFullscreenEntered: true,
+    });
+  });
+
+  it('should reset state when media realoaded', () => {
+    const state = createState({
+      isPaused: true,
+      isMuted: true,
+      volume: 40,
+      time: 500,
+      isFullscreenEntered: true,
+    });
+    const action = {type: mediaActionTypes.LOAD_MEDIA_START};
+
+    deepFreeze(state);
+
+    expect(reducer(state, action)).toEqual({
+      isPaused: false,
+      isMuted: false,
+      volume: 50,
+      time: 0,
+      isFullscreenEntered: false,
     });
   });
 });

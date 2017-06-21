@@ -1,4 +1,5 @@
 import * as types from './actionTypes';
+import {actionTypes as mediaTypes} from 'features/media';
 
 const DEFAULT_STATE = {
   isPaused: false,
@@ -33,6 +34,9 @@ export default function reducer(state = DEFAULT_STATE, {type, payload}) {
 
     case types.SET_FULLSCREEN_MODE:
       return changeProp(state, 'isFullscreenEntered', payload);
+
+    case mediaTypes.LOAD_MEDIA_START:
+      return {...DEFAULT_STATE};
 
     default:
       return state;

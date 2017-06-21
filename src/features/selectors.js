@@ -1,2 +1,2 @@
-// eslint-disable-next-line import/prefer-default-export
 export const playback = state => state.playback;
+export const media = state => state.media;
