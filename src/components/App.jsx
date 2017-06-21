@@ -1,6 +1,7 @@
 import React from 'react';
 import Page from 'components/Page';
 import Spinner from 'components/Spinner';
+import Video from 'components/Video';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       >
         <Spinner active />
       </div>
+      <Video />
     </Page>
   );
 }
