@@ -3,8 +3,9 @@
 const {resolve} = require('path');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-function misc(config, {absSrc}) {
+function misc(config, {absSrc, absDist}) {
   const miscDir = resolve(absSrc, 'misc');
   const htmlEntry = resolve(absSrc, 'index.html');
 
@@ -36,6 +37,12 @@ function misc(config, {absSrc}) {
         inject: false,
         template: htmlEntry,
       }),
+      new CopyWebpackPlugin([
+        {
+          from: resolve(miscDir, 'media.json'),
+          to: resolve(absDist, 'media.json'),
+        },
+      ]),
     ],
   });
 }
