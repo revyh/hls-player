@@ -1,0 +1,23 @@
+$color: #fff;
+$bg-color: rgba($color, 0.3);
+
+.base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 4px solid $bg-color;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.__active {
+  composes: base;
+  border-top: 5px solid $color;
+  animation: loader 2s linear 0s infinite;
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
