@@ -1,15 +1,16 @@
 import React from 'react';
 import Page from 'components/Page';
-import Spinner from 'components/Spinner';
-import Video from 'components/Video';
-import Panel from 'components/Panel';
+import Player from 'components/Player';
+import HlsClient from 'utils/HlsClient';
 
 export default class App extends React.Component {
   state = {
     isPaused: false,
     isMuted: false,
     volume: 50,
+    time: 0,
     isFullscreenEntered: false,
+    url: null,
   };
 
   handlePauseChange = nextIsPaused => {
@@ -18,6 +19,10 @@ export default class App extends React.Component {
 
   handleMuteChange = nextIsMuted => {
     this.setState({...this.state, isMuted: nextIsMuted});
+  };
+
+  handleTimeChange = nextTime => {
+    this.setState({...this.state, time: nextTime});
   };
 
   handleVolumeChange = nextVolume => {
@@ -31,34 +36,41 @@ export default class App extends React.Component {
     });
   };
 
+  handleLoad = () => {
+    this.setState({
+      ...this.state,
+      url: 'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8',
+    });
+  };
+
   render() {
     const {
       isPaused,
       isMuted,
       volume,
+      time,
       isFullscreenEntered,
+      url,
     } = this.state;
 
     return (
       <Page>
-        <div style={{
-          width: '100px',
-          height: '100px',
-        }}
-        >
-          <Spinner active />
-        </div>
-        <Video />
-        <Panel
+        <Player
+          Client={HlsClient}
+          mediaUrl={'some-url'}
+          url={url}
+          title="Big Buck Bunny"
           isPaused={isPaused}
           isMuted={isMuted}
           isFullscreenEntered={isFullscreenEntered}
           volume={volume}
-          time={61}
+          time={time}
           onPauseChange={this.handlePauseChange}
           onMuteChange={this.handleMuteChange}
           onVolumeChange={this.handleVolumeChange}
+          onTimeChange={this.handleTimeChange}
           onFullscreenChange={this.handleFullscreenChange}
+          onLoad={this.handleLoad}
         />
       </Page>
     );

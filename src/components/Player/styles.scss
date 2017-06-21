@@ -1,0 +1,111 @@
+@import 'settings.scss';
+
+.base {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: $base-bg-color;
+}
+
+.loader-elem {
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.loader-icon-elem {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  fill: #fff;
+}
+
+.loader-btn-elem {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.title-elem {
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 190px;
+  width: 100%;
+  padding: 66px 50px 0;
+  box-sizing: border-box;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba($base-bg-color, 1) 0%,
+      rgba($base-bg-color, 0.7) 20%,
+      rgba($base-bg-color, 0) 100%
+    );
+  z-index: 1;
+}
+
+.title-elem__hidden {
+  composes: title-elem;
+  display: none;
+}
+
+.title-text-elem {
+  display: block;
+  font-size: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.panel-elem {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  height: 190px;
+  width: 100%;
+  padding: 0 30px 66px;
+  box-sizing: border-box;
+  background-image:
+    linear-gradient(
+      to top,
+      rgba($base-bg-color, 1) 0%,
+      rgba($base-bg-color, 0.7) 20%,
+      rgba($base-bg-color, 0) 100%
+    );
+  z-index: 1;
+}
+
+.panel-elem__hidden {
+  composes: panel-elem;
+  display: none;
+}
+
+.video-elem {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.video-elem__hidden {
+  composes: video-elem;
+  opacity: 0;
+}

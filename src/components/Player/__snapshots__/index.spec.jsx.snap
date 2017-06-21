@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render 1`] = `
+<div
+  className="base"
+>
+  <div
+    className="loaderElem"
+  >
+    <Spinner
+      active={false}
+    />
+    <Icon
+      className="loaderIconElem"
+      symbol="play"
+    />
+    <button
+      className="loaderBtnElem"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="titleElemHidden"
+  >
+    <span
+      className="titleTextElem"
+    >
+      some title
+    </span>
+  </div>
+  <Video
+    className="videoElemHidden"
+    isMuted={true}
+    isPaused={true}
+    videoRef={[Function]}
+    volume={10}
+  />
+  <div
+    className="panelElemHidden"
+  >
+    <Panel
+      isFullscreenEntered={true}
+      isMuted={true}
+      isPaused={true}
+      onFullscreenChange={[Function]}
+      onMuteChange={[Function]}
+      onPauseChange={[Function]}
+      onVolumeChange={[Function]}
+      time={3600}
+      volume={10}
+    />
+  </div>
+</div>
+`;
+
+exports[`should render in loaded state 1`] = `
+<div
+  className="base"
+>
+  <div
+    className="titleElemHidden"
+  >
+    <span
+      className="titleTextElem"
+    >
+      some title
+    </span>
+  </div>
+  <Video
+    className="videoElem"
+    isMuted={true}
+    isPaused={true}
+    videoRef={[Function]}
+    volume={10}
+  />
+  <div
+    className="panelElem"
+  >
+    <Panel
+      isFullscreenEntered={true}
+      isMuted={true}
+      isPaused={true}
+      onFullscreenChange={[Function]}
+      onMuteChange={[Function]}
+      onPauseChange={[Function]}
+      onVolumeChange={[Function]}
+      time={3600}
+      volume={10}
+    />
+  </div>
+</div>
+`;
+
+exports[`should render in loading state 1`] = `
+<div
+  className="base"
+>
+  <div
+    className="loaderElem"
+  >
+    <Spinner
+      active={true}
+    />
+    <Icon
+      className="loaderIconElem"
+      symbol="play"
+    />
+    <button
+      className="loaderBtnElem"
+      onClick={false}
+    />
+  </div>
+  <div
+    className="titleElemHidden"
+  >
+    <span
+      className="titleTextElem"
+    >
+      some title
+    </span>
+  </div>
+  <Video
+    className="videoElemHidden"
+    isMuted={true}
+    isPaused={true}
+    videoRef={[Function]}
+    volume={10}
+  />
+  <div
+    className="panelElemHidden"
+  >
+    <Panel
+      isFullscreenEntered={true}
+      isMuted={true}
+      isPaused={true}
+      onFullscreenChange={[Function]}
+      onMuteChange={[Function]}
+      onPauseChange={[Function]}
+      onVolumeChange={[Function]}
+      time={3600}
+      volume={10}
+    />
+  </div>
+</div>
+`;
+
+exports[`should render with visible controls in loaded state 1`] = `
+<div
+  className="base"
+>
+  <div
+    className="titleElem"
+  >
+    <span
+      className="titleTextElem"
+    >
+      some title
+    </span>
+  </div>
+  <Video
+    className="videoElem"
+    isMuted={true}
+    isPaused={true}
+    videoRef={[Function]}
+    volume={10}
+  />
+  <div
+    className="panelElem"
+  >
+    <Panel
+      isFullscreenEntered={true}
+      isMuted={true}
+      isPaused={true}
+      onFullscreenChange={[Function]}
+      onMuteChange={[Function]}
+      onPauseChange={[Function]}
+      onVolumeChange={[Function]}
+      time={3600}
+      volume={10}
+    />
+  </div>
+</div>
+`;

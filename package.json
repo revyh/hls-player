@@ -21,7 +21,8 @@
     "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-input-range": "^1.1.4"
+    "react-input-range": "^1.1.4",
+    "screenfull": "^3.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
